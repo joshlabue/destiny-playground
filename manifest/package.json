@@ -1,0 +1,16 @@
+{
+  "name": "manifest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.4.16",
+    "node-fetch": "^2.6.1",
+    "sqlite3": "^5.0.0"
+  }
+}
