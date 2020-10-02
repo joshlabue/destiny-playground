@@ -18,5 +18,8 @@ for(item in results) {
         description: results[item]['displayProperties']['description'],
         itemType: results[item]['itemTypeAndTierDisplayName']
     };
+    console.log(`${JSON.stringify(results[item])}\n\n\n-----\n\n\n`);
     console.log(`${resultItem.name} (${resultItem.itemType}) - ${resultItem.description}`);
+
+    
 }
