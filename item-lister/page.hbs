@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D2 Items</title>
+        <style>
+            body {
+                background: black;
+                color:white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .items {
+                display:grid;
+                grid-template-columns: auto ;
+                
+            }
+
+            .grid-item {
+                border: 1px solid rgba(255,255,255, 0.8);
+                padding:5px;
+                width:250px;
+            }
+            
+            p {
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body onresize="updateView()">
+        <div class="items" id="items">
+            {{#items}}
+                <div class="grid-item">
+                    <p style="font-size: 25px;">{{displayProperties.name}}</p>
+                    <img src="https://bungie.net/{{displayProperties.icon}}">
+                </div>
+            {{/items}}
+        </div>
+        <script>
+            function updateView() {
+                let items = document.getElementById('items');
+                items.style.gridTemplateColumns = 'auto '.repeat(Math.floor(window.innerWidth/270));
+            }
+
+            updateView();
+
+        </script>
+    </body>
+</html>
